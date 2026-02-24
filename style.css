@@ -114,8 +114,10 @@ nav.sidebar ul.question-list li.selected {
   color: #14532d;
 }
 
-nav.sidebar ul.question-list li:hover:not(.selected) {
-  color: #22c55e;
+@media (hover: hover) and (pointer: fine) {
+  nav.sidebar ul.question-list li:hover:not(.selected) {
+    color: #22c55e;
+  }
 }
 
 /* botão de toggle da sidebar (mobile) */
@@ -226,7 +228,7 @@ main.content > * + * {
 }
 
 .answer-btn.correct {
-  background: #22c55e;
+  background: #16a34a;
   color: #052e16;
   font-weight: 700;
 }
@@ -403,11 +405,13 @@ button:hover {
   border: 1px solid transparent;
 }
 
-/* Efeito hover */
-.question-list li:hover {
-  background-color: #22c55e;
-  color: #052e16;
-  border-color: #16a34a;
+/* Efeito hover apenas em dispositivos com mouse */
+@media (hover: hover) and (pointer: fine) {
+  .question-list li:hover {
+    background-color: #22c55e;
+    color: #052e16;
+    border-color: #16a34a;
+  }
 }
 
 .question-list li.active {
