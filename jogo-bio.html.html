@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="description" content="Quiz interativo sobre transporte de membranas celulares. Teste seus conhecimentos e aprenda sobre os diferentes tipos de transporte celular." />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<title>Quiz Interativo: Membrana Plasmatica e Citoplasma</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+<script src="https://kit.fontawesome.com/efef0670e1.js" crossorigin="anonymous"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" /> 
+
+</head>
+
+<body>
+
+<div id="startScreen" class="start-screen">
+  <h1><i class="fa-solid fa-puzzle-piece" aria-hidden="true"></i> QUIZ</h1>
+  <h1>Membrana Plasmatica e <br> Citoplasma</h1>
+  <p>Um jogo interativo para aprender sobre a Membrana Plasmatica e Citoplasma</p>
+  <img src="foto-telainicial.png" alt="Ilustração de membrana celular" />
+  <button id="startBtn">
+    <i class="fa-solid fa-play"></i> INICIAR JOGO
+  </button>
+</div>
+
+<header>
+  <button id="sidebarToggle" aria-label="Abrir menu de navegação" title="Abrir menu">
+    <span class="material-icons">menu</span>
+  </button>
+  <div class="logo" aria-label="Logo Quiz Transporte de Membranas"><i class="fa-solid fa-dna"></i> Quiz - Membrana Plasmatica e Citoplasma</div>
+</header>
+
+<div class="layout">
+<nav class="sidebar" aria-label="Navegação das perguntas">
+  <h2>Questões</h2>
+  <ul class="question-list" id="questionList" role="list" tabindex="0">
+    <!-- Lista de perguntas dinamicamente inserida -->
+  </ul>
+</nav>
+
+<main class="content" role="main" aria-live="polite" aria-atomic="true" aria-relevant="additions">
+  <section class="question-card" aria-labelledby="questionTitle" aria-describedby="questionDesc" role="region" tabindex="0">
+    <h3 id="questionTitle">Carregando pergunta...</h3>
+    <div id="questionDesc" style="margin-top:12px; font-size:1rem; color:#1b69d8;">Selecione uma resposta abaixo:</div>
+    <div class="answers" role="list" id="answersList" aria-label="Alternativas de resposta">
+
+      <!-- Alternativas dinâmicas -->
+    </div>
+  </section>
+
+  <div class="scoreboard" aria-live="polite" aria-atomic="true" id="scoreBoard" role="status" aria-relevant="text">
+    Pontuação: 0
+  </div>
+</main>
+</div>
+
+<div id="toast" role="alert" aria-live="assertive" aria-atomic="true">
+  <span class="material-icons" aria-hidden="true" id="toastIcon">check_circle</span>
+  <span id="toastMessage"></span>
+</div>
+<script src="scrip.js"></script>
+
+</body>
+</html>
